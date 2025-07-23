@@ -1,3 +1,5 @@
+./contracts/account-manager/AccountManager.sol
+./contracts/account-manager/IAccountManager.sol
 ./contracts/clob/CLOB.sol
 ./contracts/clob/CLOBManager.sol
 ./contracts/clob/ICLOB.sol
