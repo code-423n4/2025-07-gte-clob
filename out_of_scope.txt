@@ -1,5 +1,3 @@
-./contracts/account-manager/AccountManager.sol
-./contracts/account-manager/IAccountManager.sol
 ./contracts/launchpad/Distributor.sol
 ./contracts/launchpad/LaunchToken.sol
 ./contracts/launchpad/LaunchpadLPVault.sol
