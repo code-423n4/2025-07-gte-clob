@@ -1,0 +1,10 @@
+{
+  "dictionaryDefinitions": [
+    {
+      "name": "allowedWords",
+      "path": "./.config/cspell/cSpell_dict.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": ["allowedWords"]
+}

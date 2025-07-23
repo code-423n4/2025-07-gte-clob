@@ -1,0 +1,30 @@
+[profile.default]
+evm_version = 'cancun'
+libs = ["lib"]
+optimizer = true
+optimizer-runs = 200
+out = "out"
+solc_version = '0.8.27'
+src = "contracts"
+test = 'test'
+via_ir = false
+
+
+[rpc_endpoints]
+testnet = "${RPC_TESTNET}"
+
+
+[fmt]
+single_line_statement_blocks="single"
+multiline_func_header="attributes_first"
+contract_new_lines=false
+sort_imports=false
+override_spacing=true
+line_length=120
+tab_width=4
+int_types="long"
+quote_style="double"
+number_underscore="thousands"
+hex_underscore="remove"
+wrap_comments=false
+ignore=["script/", "test/"]

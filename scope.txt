@@ -1,0 +1,16 @@
+./contracts/clob/CLOB.sol
+./contracts/clob/CLOBManager.sol
+./contracts/clob/ICLOB.sol
+./contracts/clob/ICLOBManager.sol
+./contracts/clob/ILimitLens.sol
+./contracts/clob/types/Book.sol
+./contracts/clob/types/FeeData.sol
+./contracts/clob/types/Order.sol
+./contracts/clob/types/RedBlackTree.sol
+./contracts/clob/types/Roles.sol
+./contracts/clob/types/TransientMakerData.sol
+./contracts/router/GTERouter.sol
+./contracts/utils/Operator.sol
+./contracts/utils/interfaces/IOperator.sol
+./contracts/utils/types/EventNonce.sol
+./contracts/utils/types/OperatorHelperLib.sol

@@ -1,0 +1,6 @@
+{
+  "filter_paths": "lib",
+  "exclude_dependencies": true,
+  "detectors_to_exclude": ["timestamp", "arbitrary-send-erc20"],
+  "solc_disable_warnings": [5574]
+}
