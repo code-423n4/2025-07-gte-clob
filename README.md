@@ -1,39 +1,13 @@
-# ✨ So you want to run an audit
-
-This `README.md` contains a set of checklists for our audit collaboration. This is your audit repo, which is used for scoping your audit and for providing information to wardens
-
-Some of the checklists in this doc are for our scouts and some of them are for **you as the audit sponsor (⭐️)**.
-
----
-
-# Repo setup
-
-## ⭐️ Sponsor: Add code to this repo
-
-- [ ] Create a PR to this repo with the below changes:
-- [ ] Confirm that this repo is a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
-- [ ] Please have final versions of contracts and documentation added/updated in this repo **no less than 48 business hours prior to audit start time.**
-- [ ] Be prepared for a 🚨code freeze🚨 for the duration of the audit — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the audit. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
-
-## ⭐️ Sponsor: Repo checklist
-
-- [ ] Modify the [Overview](#overview) section of this `README.md` file. Describe how your code is supposed to work with links to any relevant documentation and any other criteria/details that the auditors should keep in mind when reviewing. (Here are two well-constructed examples: [Ajna Protocol](https://github.com/code-423n4/2023-05-ajna) and [Maia DAO Ecosystem](https://github.com/code-423n4/2023-05-maia))
-- [ ] Optional: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
-- [ ] Review and confirm the details created by the Scout (technical reviewer) who was assigned to your contest. *Note: any files not listed as "in scope" will be considered out of scope for the purposes of judging, even if the file will be part of the deployed contracts.*  
-
----
-
-# Sponsorname audit details
-- Total Prize Pool: XXX XXX USDC (Notion: Total award pool)
-  - HM awards: up to XXX XXX USDC (Notion: HM (main) pool)
-    - If no valid Highs or Mediums are found, the HM pool is $0 
-  - QA awards: XXX XXX USDC (Notion: QA pool)
-  - Judge awards: XXX XXX USDC (Notion: Judge Fee)
-  - Scout awards: $500 USDC (Notion: Scout fee - but usually $500 USDC)
-  - (this line can be removed if there is no mitigation) Mitigation Review: XXX XXX USDC
+# GTE Spot CLOB and Router audit details
+- Total Prize Pool: $63,250 in USDC
+  - HM awards: up to $57,600 in USDC
+    - If no valid Highs or Mediums are found, the HM pool is $0
+  - QA awards: $2,400 in USDC
+  - Judge awards: $3,000 in USDC
+  - Scout awards: $250 in USDC
 - [Read our guidelines for more details](https://docs.code4rena.com/competitions)
-- Starts XXX XXX XX 20:00 UTC (ex. `Starts March 22, 2023 20:00 UTC`)
-- Ends XXX XXX XX 20:00 UTC (ex. `Ends March 30, 2023 20:00 UTC`)
+- Starts July 23, 2025 20:00 UTC 
+- Ends August 6, 2025 20:00 UTC 
 
 **❗ Important notes for wardens** 
 ## 🐺 C4 staff: delete the PoC requirement section if not applicable - i.e. for non-Solidity/EVM audits.
@@ -42,21 +16,127 @@ Some of the checklists in this doc are for our scouts and some of them are for *
   - PoCs must use the test suite provided in this repo.
   - Your submission will be marked as Insufficient if the POC is not runnable and working with the provided test suite.
   - Exception: PoC is optional (though recommended) for wardens with signal ≥ 0.68.
-1. Judging phase risk adjustments (upgrades/downgrades):
+2. Judging phase risk adjustments (upgrades/downgrades):
   - High- or Medium-risk submissions downgraded by the judge to Low-risk (QA) will be ineligible for awards.
   - Upgrading a Low-risk finding from a QA report to a Medium- or High-risk finding is not supported.
   - As such, wardens are encouraged to select the appropriate risk level carefully during the submission phase.
 
 ## Automated Findings / Publicly Known Issues
 
-The 4naly3er report can be found [here](https://github.com/code-423n4/YYYY-MM-contest-candidate/blob/main/4naly3er-report.md).
+The 4naly3er report can be found [here](https://github.com/code-423n4/2025-07-gte/blob/main/4naly3er-report.md).
 
 _Note for C4 wardens: Anything included in this `Automated Findings / Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
-## 🐺 C4: Begin Gist paste here (and delete this line)
 
+On CLOB fill, filled amounts are rounded down to the nearest lot. FOK fill orders *should* not revert if only the amount rounded off is left unfilled, and the user is not charged for the dust. the known issue being lot dust exists, how we state we handle it may have valid issues to target.
 
+✅ SCOUTS: Please format the response above 👆 so its not a wall of text and its readable.
 
+# Overview
 
+[ ⭐️ SPONSORS: add info here ]
+
+## Links
+
+- **Previous audits:**  (your teammates on zellic may share the previous gte audits here)
+  - ✅ SCOUTS: If there are multiple report links, please format them in a list.
+- **Documentation:** https://docs.gte.xyz/home/overview/about-gte
+- **Website:** https://www.gte.xyz
+- **X/Twitter:** https://x.com/GTE_XYZ
+  
+---
+
+# Scope
+
+[ ✅ SCOUTS: add scoping and technical details here ]
+
+### Files in scope
+- ✅ This should be completed using the `metrics.md` file
+- ✅ Last row of the table should be Total: SLOC
+- ✅ SCOUTS: Have the sponsor review and and confirm in text the details in the section titled "Scoping Q amp; A"
+
+*For sponsors that don't use the scoping tool: list all files in scope in the table below (along with hyperlinks) -- and feel free to add notes to emphasize areas of focus.*
+
+| Contract | SLOC | Purpose | Libraries used |  
+| ----------- | ----------- | ----------- | ----------- |
+| [contracts/folder/sample.sol](https://github.com/code-423n4/repo-name/blob/contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+
+### Files out of scope
+✅ SCOUTS: List files/directories out of scope
+
+# Additional context
+
+## Areas of concern (where to focus for bugs)
+## Rounding / overflow
+Any form of rounding / overflow with regards to order filling / order amendment that can result in someone erroneously receiving more tokens than they deserve is unacceptable. Neither party in a trade, taker nor maker, should end up with more tokens than either had available to match.
+
+## DOS
+The main type of DOS we are worried about is Order Flooding. Order Flooding is when someone crowds either the top, or a distant price in the book with many orders that would take many transactions to clear, thus slowing down everyone's ability to price the book equally to the broader market. We currently implement a minOrderSize and maxLimitsPlacedPerTx to combat this, but we do not have admin cancel. 
+
+We are mulling the idea of allowing admin cancels so long as the orders being cancelled are under a certain % of the spot oi, or far enough away from top of book, but its not in scope to discuss the viability of this.
+
+We want to make sure that our intended goal of 1) not letting non-whitelisted callers place more limits in a txn than the min setting and 2) enforcing minLimitOrderAmountInBase both cannot be manipulated. Auditors should focus on breaking these assumptions, and we can focus on the viability of our DOS protection as a whole vs adding an admin cancel
+
+✅ SCOUTS: Please format the response above 👆 so its not a wall of text and its readable.
+
+## Main invariants
+
+1) for a given token (T) and all markets (M) it is either the base / quote assets of, the balance of the AccountManager.sol (AM) must be equal to: 
+
+(T's feesAccrued in AM) + (account balances of T in AM) + (all open orders in all Ms that are selling T, converted to quote amount if is that M's quote token)
+
+2) For functions guarded by an operator approval check, only the "account", or a caller who has been approved by the account for that operator role required should be able to call the function
+
+✅ SCOUTS: Please format the response above 👆 so its not a wall of text and its readable.
+
+## All trusted roles in the protocol
+
+- Ownable / Ownable roles owners
+- contracts/clob/types/Roles.sol. these are the roles that have access *in addition* to the owner of the CLOBManager (we may slim these down under a smaller number of roles in the future)
+- ERC1967 adminOf(CLOBManager)
+
+all of these will either be a multisig, or contract with on-chain risk parameters for the foreseeable future
+
+✅ SCOUTS: Please format the response above 👆 using the template below👇
+
+| Role                                | Description                       |
+| --------------------------------------- | ---------------------------- |
+| Owner                          | Has superpowers                |
+| Administrator                             | Can change fees                       |
+
+✅ SCOUTS: Please format the response above 👆 so its not a wall of text and its readable.
+
+## Running tests
+
+*These instructions are for the C4 scout to prepare the audit repo off of our private repo*
+
+1) git checkout 
+ install foundry (https://github.com/liquid-labs-inc/gte-contracts)
+2) run forge test
+
+If forge test fails, it likely means that you do not have access to gte-univ2 contracts repo, please reach out if this happens
+
+✅ SCOUTS: Please format the response above 👆 using the template below👇
+
+```bash
+git clone https://github.com/code-423n4/2023-08-arbitrum
+git submodule update --init --recursive
+cd governance
+foundryup
+make install
+make build
+make sc-election-test
+```
+To run code coverage
+```bash
+make coverage
+```
+
+✅ SCOUTS: Add a screenshot of your terminal showing the test coverage
+
+## Miscellaneous
+Employees of GTE and employees' family members are ineligible to participate in this audit.
+
+Code4rena's rules cannot be overridden by the contents of this README. In case of doubt, please check with C4 staff.
 
 # Scope
 
