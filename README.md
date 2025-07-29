@@ -50,7 +50,7 @@ GTE leverages its high-performance infrastructure to offer Spot Central Limit Or
 - **Documentation:** https://docs.gte.xyz/home/overview/about-gte
 - **Website:** https://www.gte.xyz
 - **X/Twitter:** https://x.com/GTE_XYZ
-- **Code walk-through**: https://youtu.be/9TOnTuSh3Qg
+- **Code walk-through**: https://youtu.be/oXqeMTbnhew
   
 ---
 
