@@ -30,6 +30,12 @@ _Note for C4 wardens: Anything included in this `Automated Findings / Publicly K
 
 On CLOB fill, filled amounts are rounded down to the nearest lot. FOK fill orders *should* not revert if only the amount rounded off is left unfilled, and the user is not charged for the dust. How we state we handle it may have valid issues to target in case any severe loss or otherwise unintended consequence can be demonstrated.
 
+### Transient Transaction Limit Error in Amendments
+
+A finding was erroneously disclosed during the code walkthrough that was provided while the contest was ongoing. This finding relates to how the transient limit "maximum limit orders placed per transaction" is not properly incremented during `amend()` invocations.
+
+As this vulnerability was publicly disclosed, it should be considered out-of-scope. Any submissions that were created prior to the dissemination of the code walkthrough will be considered in-scope.
+
 # Overview
 
 ## GTE onchain Central-Limit Order Book
