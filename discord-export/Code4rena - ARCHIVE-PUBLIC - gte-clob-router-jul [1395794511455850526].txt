@@ -1,0 +1,193 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-PUBLIC / gte-clob-router-jul
+==============================================================
+
+[07/22/2025 21:40] itsmetechjay (pinned)
+👋 Hello and welcome to the $63,250 in USDC **GTE Spot CLOB and Router** audit channel!
+
+📆 Audit opens Wednesday, 23 July 2025 20:00 (20:00 UTC) and runs through Wednesday, 06 August 2025 20:00 (20:00 UTC) (14 days).
+
+**❗A coded, runnable PoC is required for all High/Medium submissions to this audit.**.  
+- This repo includes a basic template to run the test suite under the `test/c4-poc` folder.
+- PoCs **must** use the test suite provided in the audit repo.
+- Your submission will be marked as `Insufficient` if the POC is not runnable and working with the provided test suite.
+- Exception: PoC is optional (though recommended) for wardens with signal ≥ 0.68
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Join the audit: https://code4rena.com/audits/2025-07-gte-spot-clob-and-router
+
+
+[07/22/2025 22:59] itsmetechjay
+Pinned a message.
+
+
+[07/23/2025 20:04] itsmetechjay (pinned)
+🔎 **Got audit-related questions? Here's your roadmap** 
+
+Find the information you need efficiently:
+
+1. Step 1: **Review project documentation** in the audit repo. [Join the audit](https://code4rena.com/audits/2025-07-gte-spot-clob-and-router) for access.
+
+2. Step 2: Use **🤖 Docs Wolf,** C4's documentation bot assistant. Open a private thread, tag `@Docs Wolf`, and ask your question. The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources.  
+
+ ℹ️  *Note: Docs Wolf will be available within the next 24 hours.  We'll post an update once it's ready.  *
+
+3. Step 3: If you still need clarification after reviewing the docs, feel free to **ask the GTE team** directly. From [the audit page](https://code4rena.com/audits/2025-07-gte-spot-clob-and-router), join the audit and select the `Q & A` tab.
+
+To ensure sponsors can focus their time on questions that truly need their expertise, please: 
+
+- Reference what you've already checked in the docs
+- Be specific about what you need clarified
+- Use thread replies to keep discussions organized
+
+Good hunting!
+
+{Reactions}
+👍 (7) 
+
+[07/23/2025 20:05] itsmetechjay
+Pinned a message.
+
+
+[07/24/2025 14:25] itsmetechjay
+ℹ️ Docs Wolf is now available for you to use.
+
+{Reactions}
+🙏 (4) hi5 (2) 👍 (3) c4wins (2) c4feedback (3) 
+
+[07/25/2025 14:30] itsmetechjay
+ℹ️  The test suite and instructions on creating a PoC have been added to the audit repo.  Changes reflected in [this recent PR](https://github.com/code-423n4/2025-07-gte-clob/pull/2).
+
+{Reactions}
+👍 (6) hi5 
+
+[07/29/2025 01:51] itsmetechjay
+ℹ️ The GTE team has shared a code walkthrough, added to the Links section.  Please [join the audit](https://code4rena.com/audits/2025-07-gte-spot-clob-and-router) to view.
+
+{Reactions}
+🙏 (2) 👍 (2) 
+
+[08/01/2025 17:00] itsmetechjay
+ℹ️ It's been brought to our attention that there was a mention of a submitted bug during the code walkthrough video.  This was an error, and we are sorry this happened.
+
+We've added the bug to the Known Issues section of [the audit page](https://code4rena.com/audits/2025-07-gte-spot-clob-and-router) and it is now considered out-of-scope.  Any submissions created before the walkthrough was posted will be considered in-scope.
+
+{Reactions}
+👍 (4) 
+
+[08/06/2025 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺Wardens The **GTE Spot CLOB and Router** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Progress through the judging, awarding, and reporting phases can be tracked via [the audit page](https://code4rena.com/audits/2025-07-gte-spot-clob-and-router).
+
+{Reactions}
+👍 (3) 
+
+[09/04/2025 20:59] itsmetechjay
+🤑 🎉  Awards for **GTE Spot CLOB and Router**:
+
+$23,847.14 USDC » @whisk
+$11,438.72 USDC » @gesha17
+$8,804.24 USDC » @montecristo
+$6,960.03 USDC » @lonelybones
+$1,446.28 USDC » @yesofcourse
+$1,429.33 USDC » @newspace
+$1,429.33 USDC » @holtzzx
+$1,429.33 USDC » @techOptimizor
+$1,074.29 USDC » @dex246
+$798.10 USDC » @dhank
+$524.51 USDC » @Riceee
+$40.21 USDC » @BenRai
+$37.91 USDC » @tourist_S
+$34.47 USDC » @Ragnarok
+$34.47 USDC » @0xdice
+$34.47 USDC » @Lookman
+$34.47 USDC » @0x9527
+$34.47 USDC » @pandaSecurity
+$22.69 USDC » @boredpukar
+$22.69 USDC » @lodelux
+$22.40 USDC » @anonymous_joe
+$20.96 USDC » @ollam
+$20.96 USDC » @Soosh
+$20.96 USDC » @Hard1k
+$20.39 USDC » @Olugbenga
+$19.94 USDC » @TopChallenger
+$19.82 USDC » @0xDetermination
+$19.82 USDC » @0xAura
+$19.82 USDC » @0xneeloy
+$19.82 USDC » @Gosho
+$19.25 USDC » @axelot
+$19.25 USDC » @0xPhantom
+$19.25 USDC » @DDEENNY
+$17.52 USDC » @Merulez99
+$17.52 USDC » @dimulski
+$16.95 USDC » @volodya
+$16.95 USDC » @Drynooo
+$16.95 USDC » @sedare
+$16.95 USDC » @OksanSurenyan
+$16.95 USDC » @Egbe
+$16.95 USDC » @JuggerNaut63
+$16.95 USDC » @Pastila Grasutelor
+$16.95 USDC » @gh0xt
+$5.74 USDC » @0xterrah
+$5.74 USDC » @lye012
+$3.44 USDC » @bemwe
+$3.44 USDC » @0x15
+$3.44 USDC » @KineticsOfWeb3
+$3.44 USDC » @Yanx
+$3.44 USDC » @Godwin
+$3.44 USDC » Web3Hunters (@Lamsya, @Rocco, and @BlackAdam)
+$3.44 USDC » @befree3x
+$3.44 USDC » @WillyCode20
+$3.44 USDC » @@0xdragon
+$3.44 USDC » @MyFranchise
+$3.44 USDC » @princekay
+$3.44 USDC » @Angry_Mustache_Man
+$3.44 USDC » @Shahil Hussain
+$3.44 USDC » @Adotsam
+$2.30 USDC » @ChainSentry
+$2.30 USDC » @Pexy
+$2.30 USDC » @EVDoc | Midgar
+$2.30 USDC » @lirezArAzAvi
+$2.30 USDC » @sharonphiliplima
+$2.30 USDC » @JeRRy
+$2.30 USDC » @Bobo
+$2.30 USDC » @Tofu
+$2.30 USDC » @Almanax
+$2.30 USDC » @Zibounne
+$2.30 USDC » @guri
+$2.30 USDC » @v2110
+$2.30 USDC » @0xhanu58
+
+🏁 Findings summary
+--------------------------------------—
+3 High risk findings
+4 Med risk findings
+997 wardens participated
+
+Top Hunter: eightzerofour
+Top Gatherer: montecristo
+Top QA report: montecristo
+
+Awards will be distributed on Ethereum within the next week. Congratulations all!  💸 💸 💸
+
+⚠️ Awardees, be sure to [complete your tax reporting info](https://docs.code4rena.com/awarding/incentive-model-and-awards/awarding-process#tax-information-for-code4rena-contributors-wardens-judges-etc) if you haven't already. This must be completed within 30 days (i.e. before Saturday, 04 October 2025) to receive your award distribution for this audit.
+
+{Reactions}
+c4ship (7) 🎉 (4) 
+
+[12/03/2025 21:00] C4
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted 12/12/2025 15:00. Please make sure to grab anything you might need before then.
+
+
+[12/11/2025 16:17] C4
+ℹ️ Reminder: this channel will be deleted after 24 hours.
+
+
+==============================================================
+Exported 12 message(s)
+==============================================================
